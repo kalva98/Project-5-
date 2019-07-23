@@ -57,7 +57,7 @@ function display(i) {
     const modal = `
             <div class="modal-container">
                 <div class="modal">
-                <button type="button" id ="modal-close-btn" class="modal-close-btn">< strong >X< /strong></button >
+                <button type="button" id ="modal-close-btn" class="modal-close-btn"><strong>X</strong></button>
                 <div class="modal-info-container">
                     <img class ="modal-img" src="${image}" alt="profile picture">
                     <h3 id="name" class="modal-name cap">${fName} ${lName}</h3> 
@@ -70,10 +70,14 @@ function display(i) {
                 </div> 
             </div>`
     $("body").append(modal)
+    $("#modal-close-btn").on("click", function () {
+        $(".modal-container").remove()
+    });
+
 }
-document.getElementByClass('card').addEventListener("click", function () {
-    
-    //pass index i
-    //call modal function
+document.getElementById('gallery').addEventListener("click", function () {
+    i = ($(this).index())
+    display(i)
+
 
 });
