@@ -45,12 +45,12 @@ function display(i) {
     let firstName = data[i].name.first;
     let lastName = data[i].name.last;
     let email = data[i].email;
-    let city = data[i].location.city.toUpperCase();
-    let state = data[i].location.state.toUpperCase();
+    let city = data[i].location.city;
+    let state = data[i].location.state;
 
     //additional information
     let phone = data[i].phone;
-    let street = data[i].location.street.toUpperCase();
+    let street = data[i].location.street;
     let birthMonth = data[i].dob.date.slice(5, 7);
     let birthDate = data[i].dob.date.slice(8, 10);
     let birthYear = data[i].dob.date.slice(0, 4);
@@ -68,7 +68,7 @@ function display(i) {
                     <p class="modal-text cap">${city}</p> 
                     <hr>
                     <p class="modal-text">${phone}</p> 
-                    <p class="modal-text">${street}, ${city}, ${state} 97204</p> 
+                    <p class="modal-text cap">${street}, ${city}, ${state} 97204</p> 
                     <p class="modal-text">Birthday: ${birthMonth}/${birthDate}/${birthYear}</p> 
                 </div> 
             </div>`
